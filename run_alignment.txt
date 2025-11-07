@@ -1,0 +1,17 @@
+# Montreal Forced Aligner Commands Used
+
+# 1. Create environment and install MFA
+conda create -n aligner -c conda-forge montreal-forced-aligner
+conda activate aligner
+
+# 2. Download resources
+mfa model download dictionary english_us_arpa
+mfa model download acoustic english_us_arpa
+
+# 3. Validate dataset
+mfa validate dataset english_us_arpa english_us_arpa
+
+# 4. Align dataset
+mfa align dataset english_us_arpa english_us_arpa output
+
+
